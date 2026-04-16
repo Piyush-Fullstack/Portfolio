@@ -1,45 +1,32 @@
 import { motion } from "framer-motion";
 import { RiReactjsLine } from "react-icons/ri";
-import { SiMongodb, SiExpress, SiMysql, SiTailwindcss } from "react-icons/si";
-import { FaNodeJs, FaJs, FaJava } from "react-icons/fa";
+import { SiMongodb, SiExpress, SiTailwindcss, SiJavascript } from "react-icons/si";
+import { FaNodeJs } from "react-icons/fa";
 
-const iconVariants = (duration) => ({
-  initial: { y: -10 },
-  animate: {
-    y: [10, -10],
-    transition: {
-      duration: duration,
-      ease: "linear",
-      repeat: Infinity,
-      repeatType: "reverse",
-    },
-  },
-});
-
-const techList = [
-  { icon: <RiReactjsLine className="text-7xl text-cyan-400" />, duration: 2.5 },
-  { icon: <FaNodeJs className="text-7xl text-green-500" />, duration: 3 },
-  { icon: <SiMongodb className="text-7xl text-green-400" />, duration: 5 },
-  { icon: <SiExpress className="text-7xl text-white" />, duration: 2 },
-  { icon: <SiTailwindcss className="text-7xl text-sky-400" />, duration: 4 },
-  { icon: <SiMysql className="text-7xl text-blue-400" />, duration: 2.8 },
+const techIcons = [
+  { icon: <RiReactjsLine />, color: "text-cyan-400", name: "React", size: "col-span-2 row-span-2" },
+  { icon: <FaNodeJs />, color: "text-green-500", name: "Node.js", size: "col-span-1" },
+  { icon: <SiMongodb />, color: "text-green-400", name: "MongoDB", size: "col-span-1" },
+  { icon: <SiExpress />, color: "text-white", name: "Express", size: "col-span-2" },
+  { icon: <SiTailwindcss />, color: "text-sky-400", name: "Tailwind", size: "col-span-1" },
+  { icon: <SiJavascript />, color: "text-yellow-400", name: "JS", size: "col-span-1" },
 ];
 
 const Technologies = () => {
   return (
-    <div className="border-b border-neutral-800 pb-24">
-      <motion.h2 whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: -50 }} className="my-20 text-center text-4xl">Technologies</motion.h2>
-      <div className="flex flex-wrap items-center justify-center gap-6">
-        {techList.map((tech, index) => (
+    <div className="py-24">
+      <h2 className="text-center text-5xl font-bold mb-16 bg-gradient-to-b from-white to-neutral-500 bg-clip-text text-transparent">
+        Tech Stack
+      </h2>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto p-4">
+        {techIcons.map((tech, index) => (
           <motion.div
             key={index}
-            variants={iconVariants(tech.duration)}
-            initial="initial"
-            animate="animate"
-            whileHover={{ scale: 1.1, borderColor: "#a855f7" }}
-            className="rounded-2xl border-4 border-neutral-800 p-6 transition-colors"
+            whileHover={{ scale: 1.02, backgroundColor: "rgba(255,255,255,0.05)" }}
+            className={`flex flex-col items-center justify-center p-8 rounded-3xl border border-white/10 bg-neutral-900/50 backdrop-blur-sm ${tech.size}`}
           >
-            {tech.icon}
+            <div className={`text-6xl ${tech.color}`}>{tech.icon}</div>
+            <p className="mt-4 text-sm font-semibold text-neutral-500">{tech.name}</p>
           </motion.div>
         ))}
       </div>
