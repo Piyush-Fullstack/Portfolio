@@ -18,7 +18,7 @@ const App = () => {
         <div className="absolute top-0 z-[-2] h-screen w-screen bg-[radial-gradient(100%_50%_at_50%_0%,rgba(0,163,255,0.13)_0%,rgba(0,163,255,0)_50%),radial-gradient(100%_50%_at_50%_0%,rgba(139,92,246,0.05)_0%,rgba(139,92,246,0)_50%)]"></div>
       </div>
 
-      <div className="container mx-auto px-8 lg:px-16">
+      <div className="container mx-auto px-8 lg:px-16 pt-24">
         <Navbar />
         
         {/* Smooth Section Transitions */}
