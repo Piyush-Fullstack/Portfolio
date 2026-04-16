@@ -1,113 +1,59 @@
 import { CONTACT } from "../constants";
-
 import { motion } from "framer-motion";
+import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
 
 const Contact = () => {
-
   return (
-
-    <motion.div
-
-      className="border-b border-neutral-900 pb-20"
-
-      initial={{ opacity: 0, y: 50 }}
-
-      whileInView={{ opacity: 1, y: 0 }}
-
-      viewport={{ once: true }}
-
-      transition={{ duration: 0.6 }}
-
-    >
-
-      <motion.h1
-
-        className="my-10 text-center text-4xl"
-
-        initial={{ opacity: 0 }}
-
-        animate={{ opacity: 1 }}
-
-        transition={{ delay: 0.2, duration: 0.6 }}
-
+    <div className="pb-24 pt-10">
+      <motion.div
+        className="rounded-3xl border border-slate-800 bg-slate-900/50 p-12 text-center backdrop-blur-sm"
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
       >
+        <h2 className="mb-10 text-4xl font-light">
+          Let's <span className="text-cyan-500 italic">Connect</span>
+        </h2>
+        
+        <div className="flex flex-wrap justify-center gap-12 text-lg">
+          {/* Address */}
+          <motion.div 
+            whileHover={{ y: -5 }}
+            className="flex flex-col items-center gap-2"
+          >
+            <FiMapPin className="text-cyan-500 text-2xl" />
+            <p className="text-slate-400">{CONTACT.address}</p>
+          </motion.div>
 
-        Get in Touch
+          {/* Phone */}
+          <motion.div 
+            whileHover={{ y: -5 }}
+            className="flex flex-col items-center gap-2"
+          >
+            <FiPhone className="text-cyan-500 text-2xl" />
+            <p className="text-slate-400">{CONTACT.phoneNo}</p>
+          </motion.div>
 
-      </motion.h1>
+          {/* Email */}
+          <motion.a
+            href={`mailto:${CONTACT.email}`}
+            whileHover={{ y: -5 }}
+            className="flex flex-col items-center gap-2 group"
+          >
+            <FiMail className="text-cyan-500 text-2xl group-hover:scale-110 transition-transform" />
+            <p className="text-slate-200 border-b border-cyan-500/0 group-hover:border-cyan-500 transition-all">
+              {CONTACT.email}
+            </p>
+          </motion.a>
+        </div>
 
-
-
-      <div className="text-center tracking-tighter">
-
-        <motion.p
-
-          className="my-4"
-
-          initial={{ opacity: 0, x: -50 }}
-
-          whileInView={{ opacity: 1, x: 0 }}
-
-          viewport={{ once: true }}
-
-          transition={{ delay: 0.3, duration: 0.5 }}
-
-        >
-
-          {CONTACT.address}
-
-        </motion.p>
-
-
-
-        <motion.p
-
-          className="my-4"
-
-          initial={{ opacity: 0, x: 50 }}
-
-          whileInView={{ opacity: 1, x: 0 }}
-
-          viewport={{ once: true }}
-
-          transition={{ delay: 0.4, duration: 0.5 }}
-
-        >
-
-          {CONTACT.phoneNo}
-
-        </motion.p>
-
-
-
-        <motion.a
-
-          href={`mailto:${CONTACT.email}`}
-
-          className="underline decoration-purple-400 hover:text-purple-400"
-
-          initial={{ scale: 0.8, opacity: 0 }}
-
-          whileInView={{ scale: 1, opacity: 1 }}
-
-          viewport={{ once: true }}
-
-          transition={{ delay: 0.5, duration: 0.5, type: "spring" }}
-
-        >
-
-          {CONTACT.email}
-
-        </motion.a>
-
-      </div>
-
-    </motion.div>
-
+        <p className="mt-16 text-sm text-slate-600 font-mono italic">
+          &lt; Crafted with React & Tailwind by Piyush Verma /&gt;
+        </p>
+      </motion.div>
+    </div>
   );
-
 };
-
-
 
 export default Contact;
