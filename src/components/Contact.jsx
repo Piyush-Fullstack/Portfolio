@@ -4,7 +4,7 @@ import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
 
 const Contact = () => {
   return (
-    <div id="#contact" className="pb-24 pt-10">
+    <div id="contact" className="pb-24 pt-10">
       <motion.div
         className="rounded-3xl border border-slate-800 bg-slate-900/50 p-12 text-center backdrop-blur-sm"
         initial={{ opacity: 0, scale: 0.95 }}
