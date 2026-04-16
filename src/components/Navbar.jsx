@@ -26,7 +26,6 @@ const Navbar = () => {
         {[
           { icon: <FaLinkedin />, link: "https://www.linkedin.com/in/vermapiyush11/" },
           { icon: <FaGithub />, link: "https://github.com/piyush-FullStack" },
-          { icon: <TbFileCv />, link: "https://drive.google.com/file/d/1tO0VAFaRsxPfNXmjAXD5XuoXtAyQpyC9/view?usp=sharing" }
         ].map((item, index) => (
           <motion.a
             key={index}
