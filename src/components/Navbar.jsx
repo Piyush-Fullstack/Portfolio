@@ -1,113 +1,44 @@
-import React from 'react';
-
 import logo from '../assets/piyushvermalogo.png';
-
 import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
-
 import { TbFileCv } from "react-icons/tb";
-
 import { motion } from 'framer-motion';
 
-
-
 const Navbar = () => {
-
   return (
+    <nav className="sticky top-0 z-50 flex items-center justify-between py-6 backdrop-blur-md bg-slate-950/50 -mx-8 px-8 lg:px-16">
+      <motion.div 
+        className="flex flex-shrink-0 items-center"
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+      >
+        <img className="w-24 h-auto brightness-110" src={logo} alt="logo" />
+      </motion.div>
 
-    <motion.nav
-
-      className="mb-20 flex items-center justify-between py-6"
-
-      initial={{ y: -50, opacity: 0 }}
-
-      animate={{ y: 0, opacity: 1 }}
-
-      transition={{ duration: 0.8, ease: 'easeOut' }}
-
-    >
-
-      <div className="flex flex-shrink-0 items-center">
-
-        <motion.img
-
-          className="mx-2 w-30 h-8"
-
-          src={logo}
-
-          alt="logo"
-
-          whileHover={{ scale: 1.1, rotate: 5 }}
-
-        />
-
-      </div>
-
-      <div className="flex items-center justify-center gap-4 text-2xl m-8">
-
-          <motion.div
-
-            whileHover={{ scale: 1.3, rotate: 10 }}
-
+      <motion.div 
+        className="flex items-center justify-center gap-6 text-xl text-slate-400"
+        initial={{ opacity: 0, x: 20 }}
+        animate={{ opacity: 1, x: 0 }}
+      >
+        {[
+          { icon: <FaLinkedin />, link: "https://www.linkedin.com/in/vermapiyush11/" },
+          { icon: <FaGithub />, link: "https://github.com/piyush-777-debug" },
+          { icon: <TbFileCv />, link: "DRIVE_LINK" }
+        ].map((item, index) => (
+          <motion.a
+            key={index}
+            href={item.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-cyan-400 transition-colors duration-300"
+            whileHover={{ scale: 1.2, y: -2 }}
             whileTap={{ scale: 0.9 }}
-
           >
-
-            <a href="https://www.linkedin.com/in/vermapiyush11/"><FaLinkedin /></a>
-
-          </motion.div>
-
-
-
-          <motion.div
-
-            whileHover={{ scale: 1.3, rotate: 10 }}
-
-            whileTap={{ scale: 0.9 }}
-
-          >
-
-            <a href="https://github.com/piyush-777-debug"><FaGithub /></a>
-
-          </motion.div>
-
-
-
-          <motion.div
-
-            whileHover={{ scale: 1.3, rotate: 10 }}
-
-            whileTap={{ scale: 0.9 }}
-
-          >
-
-            <a href="https://drive.google.com/file/d/1tO0VAFaRsxPfNXmjAXD5XuoXtAyQpyC9/view?usp=sharing"><TbFileCv /></a>
-
-          </motion.div>
-
-
-
-          {/* <motion.div
-
-            whileHover={{ scale: 1.3, rotate: 10 }}
-
-            whileTap={{ scale: 0.9 }}
-
-          >
-
-            <FaInstagram />
-
-          </motion.div> */}
-
-    </div>
-
-
-
-    </motion.nav>
-
+            {item.icon}
+          </motion.a>
+        ))}
+      </motion.div>
+    </nav>
   );
-
 };
 
-
-
-export default Navbar; 
+export default Navbar;
