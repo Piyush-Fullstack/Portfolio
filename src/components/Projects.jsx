@@ -3,31 +3,32 @@ import { motion } from "framer-motion";
 
 const Projects = () => {
   return (
-    <div className="border-b border-neutral-900 pb-4">
-      <h2 className="my-20 text-center text-4xl">Projects</h2>
-      <div className="space-y-12">
+    <div className="py-24">
+      <h2 className="text-center text-5xl font-bold mb-20 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+        Featured Work
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {PROJECTS.map((project, index) => (
           <motion.div
             key={index}
-            whileInView={{ opacity: 1, x: 0 }}
-            initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="flex flex-wrap lg:justify-center gap-8 lg:gap-16"
+            className="group relative overflow-hidden rounded-3xl border border-white/10 bg-neutral-900"
           >
-            <div className="w-full lg:w-1/4 flex justify-center">
-              <motion.img
-                whileHover={{ scale: 1.05 }}
-                src={project.image}
-                alt={project.title}
-                className="rounded-xl shadow-lg h-40 object-cover"
+            <div className="overflow-hidden">
+              <img 
+                src={project.image} 
+                alt={project.title} 
+                className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" 
               />
             </div>
-            <div className="w-full max-w-xl lg:w-3/4 text-center lg:text-left">
-              <h3 className="mb-2 font-bold text-xl text-purple-200">{project.title}</h3>
-              <p className="mb-4 text-neutral-400 leading-relaxed">{project.description}</p>
-              <div className="flex flex-wrap justify-center lg:justify-start gap-2">
+            <div className="p-8">
+              <h3 className="text-2xl font-bold text-white mb-3">{project.title}</h3>
+              <p className="text-neutral-400 mb-6 text-sm leading-relaxed">{project.description}</p>
+              <div className="flex flex-wrap gap-2">
                 {project.technologies.map((tech, idx) => (
-                  <span key={idx} className="rounded-full bg-neutral-900 px-3 py-1 text-sm font-medium text-purple-400 border border-purple-900/50">
+                  <span key={idx} className="bg-white/5 border border-white/10 px-3 py-1 rounded-full text-xs text-cyan-400">
                     {tech}
                   </span>
                 ))}
