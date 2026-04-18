@@ -1,7 +1,7 @@
-import project1 from "../assets/projects/Screenshot(96).png";
+import project1 from "../assets/projects/Screenshot-1.png";
 import project2 from "../assets/projects/project-2.png";
-import project3 from "../assets/projects/project-3.png";
-import project4 from "../assets/projects/project-4.png";
+import project3 from "../assets/projects/Screenshot-3.jpg";
+import project4 from "../assets/projects/Screenshot-2.jpg";
 
 export const HERO_CONTENT = `Motivated and detail-oriented Frontend Developer with strong proficiency in React.js, Redux Toolkit, JavaScript, and modern UI frameworks. Passionate about building interactive, responsive web applications and eager to contribute to dynamic development teams. Additionally, I have a solid understanding of backend technologies like Node.js and Express.js, which helps me collaborate effectively on full-stack projects.`;
 
