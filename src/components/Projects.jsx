@@ -32,7 +32,7 @@ const Projects = () => {
               />
               <div className="absolute inset-0 bg-slate-950/60 opacity-0 transition-opacity group-hover:opacity-100 flex items-center justify-center gap-4">
                  <a href="#" className="p-3 bg-white text-black rounded-full hover:scale-110 transition-transform"><FaExternalLinkAlt /></a>
-                 <a href="#" className="p-3 bg-slate-800 text-white rounded-full hover:scale-110 transition-transform"><FaGithub /></a>
+                 <a href={project.link} className="p-3 bg-slate-800 text-white rounded-full hover:scale-110 transition-transform"><FaGithub /></a>
               </div>
             </div>
 
