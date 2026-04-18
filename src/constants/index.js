@@ -1,4 +1,4 @@
-import project1 from "../assets/projects/project-1.png";
+import project1 from "../assets/projects/Screenshot(96).png";
 import project2 from "../assets/projects/project-2.png";
 import project3 from "../assets/projects/project-3.png";
 import project4 from "../assets/projects/project-4.png";
@@ -7,35 +7,34 @@ export const HERO_CONTENT = `Motivated and detail-oriented Frontend Developer wi
 
 export const ABOUT_TEXT = `I'm a passionate React.js developer completed my Bachelor of Computer Applications from COER University, Roorkee. I specialize in building responsive and interactive user interfaces using React.js, Redux Toolkit, and modern JavaScript (ES6+). I've completed several hands-on projects like a Notes App with centralized state management, a Random Quote Generator using APIs, and a Spotify UI Clone.I enjoy exploring new web technologies and improving my problem-solving skills through DSA and real-world project work. I am actively seeking an opportunity to join a dynamic team where I can contribute, learn, and grow as a frontend developer.`;
 
-
 export const PROJECTS = [
   {
-    title: "Music Mood website",
+    title: "AI Resume Builder",
     image: project1,
     description:
-      "Developed a mood-based music streaming application that dynamically filters and displays songs based on user-selected moods (Happy, Sad, Chill, Romantic, Workout).",
-    technologies: ["HTML", "CSS", "React", "Axios", "Redux toolkit"],
+      "Built a full-stack Resume Builder using React, Node.js, Express, and MongoDB with secure JWT authentication. Implemented dynamic sections like Education, Experience, Skills, and Projects with add/remove functionality for customizable resumes.",
+    technologies: ["React", "Node.js", "Express", "MongoDB", "JWT"],
   },
   {
-    title: "Notes Website",
+    title: "Music Mood Website",
     image: project2,
     description:
-      "Developed a scalable notes management system using React and Redux Toolkit with component-driven design and optimized state handling.",
-    technologies: ["HTML", "CSS", "React", "Redux toolkit"],
+      "Developed a mood-based music streaming application that dynamically filters and displays songs based on user-selected moods. Integrated Deezer API for song search with 30-second previews and interactive features like liking and saving tracks.",
+    technologies: ["React", "Redux Toolkit", "CSS", "Axios", "Deezer API"],
   },
   {
-    title: "Portfolio Website",
+    title: "MediaSearch Website",
     image: project3,
     description:
-      "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["HTML","React","Tailwind CSS"],
+      "Built a media search platform to explore images, videos, and GIFs using Pexels, Unsplash, and Giphy APIs. Managed global state using Redux Toolkit for smooth data handling and performance.",
+    technologies: ["React", "Redux Toolkit", "Pexels API", "Unsplash API", "Giphy API"],
   },
   {
-    title: "Spotify Clone",
+    title: "SkyCast",
     image: project4,
     description:
-      "Develop a Responsive UI Clone look like spotify with flexbox properties",
-    technologies: ["HTML", "CSS"],
+      "Developed a real-time weather application using OpenWeatherMap API. Used React Hooks for efficient state management and optimized rendering.",
+    technologies: ["React", "OpenWeather API"],
   },
 ];
 
