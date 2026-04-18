@@ -11,7 +11,7 @@ export const PROJECTS = [
   {
     title: "AI Resume Builder",
     image: project1,
-    link: https://github.com/Piyush-Fullstack/ai-resume-builder
+    link: https://github.com/Piyush-Fullstack/ai-resume-builder,
     description:
       "Built a full-stack Resume Builder using React, Node.js, Express, and MongoDB with secure JWT authentication. Implemented dynamic sections like Education, Experience, Skills, and Projects with add/remove functionality for customizable resumes.",
     technologies: ["React", "Node.js", "Express", "MongoDB", "JWT"],
@@ -19,7 +19,7 @@ export const PROJECTS = [
   {
     title: "Music Mood Website",
     image: project2,
-    link: https://github.com/Piyush-Fullstack/music-mood-app
+    link: https://github.com/Piyush-Fullstack/music-mood-app,
     description:
       "Developed a mood-based music streaming application that dynamically filters and displays songs based on user-selected moods. Integrated Deezer API for song search with 30-second previews and interactive features like liking and saving tracks.",
     technologies: ["React", "Redux Toolkit", "CSS", "Axios", "Deezer API"],
@@ -27,7 +27,7 @@ export const PROJECTS = [
   {
     title: "MediaSearch Website",
     image: project3,
-    link: https://github.com/Piyush-Fullstack/Redux-Project
+    link: https://github.com/Piyush-Fullstack/Redux-Project,
     description:
       "Built a media search platform to explore images, videos, and GIFs using Pexels, Unsplash, and Giphy APIs. Managed global state using Redux Toolkit for smooth data handling and performance.",
     technologies: ["React", "Redux Toolkit", "Pexels API", "Unsplash API", "Giphy API"],
@@ -35,7 +35,7 @@ export const PROJECTS = [
   {
     title: "SkyCast",
     image: project4,
-    link: https://github.com/Piyush-Fullstack/SkyCast
+    link: https://github.com/Piyush-Fullstack/SkyCast,
     description:
       "Developed a real-time weather application using OpenWeatherMap API. Used React Hooks for efficient state management and optimized rendering.",
     technologies: ["React", "OpenWeather API"],
